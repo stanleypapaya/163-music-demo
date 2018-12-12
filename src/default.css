@@ -1,0 +1,78 @@
+*{margin:0;padding:0;}
+*{box-sizing:border-box;}
+*::after{box-sizing:border-box;}
+*::before{box-sizing:border-box;}
+ul,ol{list-style: none;}
+a{color: inherit;text-decoration: none;}
+body{font-size: 16px; color:grey; font-family: Georgia, 'Times New Roman', Times, serif}
+
+
+.page{
+    display: flex;
+    height: 100vh;
+}
+
+.page > aside{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.songList{
+    flex-grow: 1;
+    padding: 10px;
+}
+
+.songList > li {
+    padding: 10px 0;
+    border-bottom: 2px solid #ccc;
+    cursor: pointer;
+}
+
+.songList > li.active{
+    background-color: #ccc;
+}
+
+#yyy{
+    padding: 50px 80px;
+    border: 2px dashed #bbb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+#xxx{
+    cursor: pointer;
+}
+
+.newSong{
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+
+.detail{
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.detail > .row > input{
+    width: 450px;
+    height: 30px;
+    line-height: 20px;
+    font: inherit;
+    margin: 20px 10px;
+}
+
+.detail > .row > button{
+    margin-top: 20px;
+    font: inherit;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: inherit;
+}
