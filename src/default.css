@@ -55,6 +55,11 @@ body{font-size: 16px; color:grey; font-family: Georgia, 'Times New Roman', Times
     background-color: #f2f2f2;
 }
 
+main{
+    background-color: #ccc;
+    width: 100%;
+}
+
 .detail{
     font-size: 20px;
     padding: 20px;
@@ -62,17 +67,20 @@ body{font-size: 16px; color:grey; font-family: Georgia, 'Times New Roman', Times
 }
 
 .detail > .row > input{
-    width: 450px;
+    width: 650px;
     height: 30px;
     line-height: 20px;
     font: inherit;
     margin: 20px 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
 .detail > .row > button{
     margin-top: 20px;
     font: inherit;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
     color: inherit;
 }
