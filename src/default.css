@@ -18,8 +18,11 @@ body{font-size: 16px; color:grey; font-family: Georgia, 'Times New Roman', Times
     flex-direction: column;
 }
 
-.songList{
+#songList-container{
     flex-grow: 1;
+}
+
+.songList{
     padding: 10px;
 }
 
