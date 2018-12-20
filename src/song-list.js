@@ -6,7 +6,7 @@
         <li>歌曲1</li>
         <li>歌曲2</li>
         <li>歌曲3</li>
-        <li class="active">歌曲4</li>
+        <li>歌曲4</li>
         <li>歌曲5</li>
         <li>歌曲6</li>
         <li>歌曲7</li>
