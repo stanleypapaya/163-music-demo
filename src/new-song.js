@@ -21,6 +21,9 @@
             window.eventHub.on('select', (data)=>{
                 this.deactive()
             })
+            $(this.view.el).on('click', ()=>{
+                window.location = 'http://127.0.0.1:8080/src/admin.html'
+            })
         },
         active(){
             $(this.view.el).addClass('active')
