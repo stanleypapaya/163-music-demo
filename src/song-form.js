@@ -5,15 +5,15 @@
         <form class="detail">
             <div class="row">
                 <label>歌名：</label>
-                <input type="text" value="__key__" name="name">
+                <input type="text" value="__name__" name="name">
             </div>
             <div class="row">
                 <label>歌手：</label>
-                <input type="text" name="singer">                   
+                <input type="text" value="__singer__" name="singer">                   
             </div>
             <div class="row">
                 <label>外链：</label>
-                <input type="text" value="__link__" name="url">
+                <input type="text" value="__url__" name="url">
             </div>
             <div class="row">
                 <button type="submit">保存</button>
@@ -21,7 +21,7 @@
         </form>
         `,
         render(data = {}){
-            let placeholder = ['key', 'link']
+            let placeholder = ['name', 'singer', 'url', 'id']
             let html = this.template
             placeholder.map((string)=>{
                 html = html.replace(`__${string}__`, data[string] || '')
@@ -29,7 +29,7 @@
             $(this.el).html(html)
         },
         reset(){
-            this.view.render({})
+            this.render({})
         }
     }
     let model = {
@@ -80,7 +80,9 @@
                 })
                 this.model.create(data)
                     .then(() =>{
-                        console.log(this.model.data)
+                        let string = JSON.stringify(this.model.data)
+                        let object = JSON.parse(string)
+                        window.eventHub.emit('create', object)
                         this.view.reset()
                     })
             })
