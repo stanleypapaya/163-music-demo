@@ -31,7 +31,7 @@
             this.model = model
             this.view.render(this.model.data)
             window.eventHub.on('upload', (data)=>{
-                console.log('new song 模块得到data')
+                console.log('song form 模块得到data')
                 console.log(data)
             })
         }

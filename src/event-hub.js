@@ -12,7 +12,7 @@ window.eventHub = {
             }
          }
     },
-    on(eventName , fn){  //订阅
+    on(eventName, fn){  //订阅
         if(this.events[eventName] === undefined){
             this.events[eventName] = []
        }

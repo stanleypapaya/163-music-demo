@@ -77,11 +77,10 @@
                            var domain = up.getOption('domain')
                            var response = JSON.parse(info.response)
                            var sourceLink = domain +'/' + encodeURIComponent(response.key)
-                           window.eventHub.emit('upload', (data)=>{
+                           window.eventHub.emit('upload', {
                                 link: sourceLink,
                                 key: response.key
                         })
-                    
                     },
                     'Error': function(up, err, errTip) {
                            //上传出错时,处理相关的事情

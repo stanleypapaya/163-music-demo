@@ -58,6 +58,10 @@ body{font-size: 16px; color:grey; font-family: Georgia, 'Times New Roman', Times
     background-color: #f2f2f2;
 }
 
+.newSong.active{
+    background-color: #ccc;
+}
+
 main{
     background-color: #ccc;
     width: 100%;
