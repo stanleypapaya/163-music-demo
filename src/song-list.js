@@ -22,22 +22,31 @@
     let model = {
         data: {
             songs: []
+        },
+        find(){
+            var query = new AV.Query('Song')
+            return query.find().then((songs) => {
+              this.data.songs = songs.map((song)=>{
+                return {id: song.id, name: song.attributes.name, singer: song.attributes.singer, url: song.attributes.url}
+              })
+            })
         }
+        
     }
     let controller = {
         init(view,model){
             this.view = view
             this.model = model
             this.view.render(this.model.data)
+            this.model.find().then(()=>{
+                this.view.render(this.model.data)
+            })
             window.eventHub.on('upload',()=>{
                 this.view.clearActive()
             })
             window.eventHub.on('create',(songData)=>{
                 this.model.data.songs.push(songData)
-                console.log('songData')
-                console.log(songData)
                 this.view.render(this.model.data)
-                console.log(this.model.data)
             })
         }
     }
