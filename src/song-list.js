@@ -53,6 +53,16 @@
                 this.model.data.songs.push(songData)
                 this.view.render(this.model.data)
             })
+            window.eventHub.on('update', (song)=>{
+                let songs = this.model.data.songs
+                for( let i = 0; i < songs.length; i++){
+                    if(songs[i].id === song.id){
+                        Object.assign(songs[i], song)
+                        break
+                    }
+                }
+                this.view.render(this.model.data)
+            })
         },
         bindEvents(){
             $(this.view.el).on('click', 'li', (e)=>{
