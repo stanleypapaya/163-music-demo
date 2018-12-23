@@ -16,7 +16,7 @@
                 <input type="text" value="__url__" name="url">
             </div>
             <div class="row">
-                <button type="submit">保存</button>
+                <button type="submit">保存</button>          
             </div>
         </form>
         `,
