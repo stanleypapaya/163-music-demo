@@ -3,9 +3,11 @@
         el: '#siteLoading',
         show(){
             $(this.el).addClass('active')
+            $('.page').addClass('active')
         },
         hide(){
             $(this.el).removeClass('active')
+            $('.page').removeClass('active')
         }
     }
     let controller = {

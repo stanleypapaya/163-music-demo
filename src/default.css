@@ -40,6 +40,10 @@ body{font-size: 16px; color:grey; font-family: Georgia, 'Times New Roman', Times
     visibility: visible;
 }
 
+.page.active{
+    pointer-events: none;
+}
+
 .page{
     display: flex;
     height: 100vh;
